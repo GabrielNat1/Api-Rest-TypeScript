@@ -1,11 +1,14 @@
 import express, { Request, Response } from 'express';
+import 'dotenv/config';
+
+
+import { rounter } from './routes';
 
 const server = express();
 
+server.use(rounter);
 
-server.get('/', (req: Request, res: Response) => {
-    res.send('olá, dev!');
-    return
-});
+
+
 
 export { server };
