@@ -1,14 +1,15 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import 'dotenv/config';
 
+import { router } from './routes';
 
-import { rounter } from './routes';
 
 const server = express();
 
-server.use(rounter);
 
+server.use(express.json());
 
+server.use(router);
 
 
 export { server };

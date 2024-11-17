@@ -1,16 +1,21 @@
-import { Router } from "express";
+import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 
-
-const rounter = Router();
-
-
-rounter.post('/teste', (req, res) => {
-    console.log(req);
-   
-    res.status(StatusCodes.ACCEPTED).json(req.body);
-    return
-})
+import { CidadesController } from './../controllers';
 
 
-export { rounter };
+
+const router = Router();
+
+
+
+router.get('/', (_, res) => {
+  res.send('Olá, DEV!');
+  return
+});
+
+router.post('/cidades', CidadesController.create);
+
+
+
+export { router };
