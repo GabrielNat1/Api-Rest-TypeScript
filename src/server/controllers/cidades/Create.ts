@@ -17,7 +17,7 @@ export const createValidaton = Validation((getSchema) => ({
         estado: yup.string().required().min(3),
     })),
     query: getSchema<Ifilter>(yup.object().shape({
-        filter: yup.string().required().min(3),
+        filter: yup.string().optional().min(3),
     })),
 }));
 
