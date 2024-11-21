@@ -17,7 +17,12 @@ export const getAllValidaton = Validation((getSchema) => ({
 }));
 
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
-    console.log(req.query);
+    res.setHeader('acess-control-expose-headers', 'x-total-count');
 
-  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('não implementado!');
+
+  return res.status(StatusCodes.OK).json([{
+    id: 1,
+    nome: 'caxias do sul',
+  }
+]);
 };
