@@ -7,6 +7,8 @@
   "private": false,
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
+    "postinstall": "tsc",
+    "production": "node ./build/index.js",
     "test": "jest"
   },
   "dependencies": {
@@ -28,5 +30,8 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.14.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }

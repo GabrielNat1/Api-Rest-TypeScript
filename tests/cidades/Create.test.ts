@@ -27,9 +27,6 @@ describe('Cidades - Create', () => {
             .post('/cidades')
             .send({nome: 'ca'});
     
-    
-    
-    
             expect(res1.statusCode).toEqual(StatusCodes.BAD_REQUEST);
             expect(res1.body).toHaveProperty('errors.body.nome');
     
