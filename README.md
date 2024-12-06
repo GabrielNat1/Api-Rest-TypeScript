@@ -11,7 +11,7 @@
     <li><strong>Node.js</strong> 🌐</li>
     <li><strong>TypeScript</strong> 🦾</li>
     <li><strong>Yarn</strong> 📦</li>
-    <li><strong>Banco de Dados:</strong> JSON</li>
+    <li><strong>Banco de Dados:</strong> JSON & SQLite3</li>
 </ul>
 
 ## 🚀 Funcionalidades
