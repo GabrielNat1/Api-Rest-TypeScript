@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ETableNames } from '../../Etablenames';
+=======
+import { ETableNames } from '../../ETableNames';
+>>>>>>> 5c01b85f5a10c38f2fbecec47be1600ddd8d7019
 import { ICidade } from '../../models';
 import { Knex } from '../../knex';
 
