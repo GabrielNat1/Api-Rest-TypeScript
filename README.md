@@ -34,7 +34,7 @@
     ```
 2. **Acesse o diretório do projeto:**
     ```bash
-    cd CityListAPI
+    cd nome do repositorio
     ```
 3. **Instale as dependências:**
     ```bash
