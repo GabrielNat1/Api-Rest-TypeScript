@@ -1,3 +1,5 @@
+<img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
+
 <div align="center" style="font-family: Arial, sans-serif; padding: 20px; background: linear-gradient(135deg, #007acc, #8a2be2); color: #fff; border-radius: 10px; border: 2px solid #fff;">
     <h1> City API </h1> <img src='https://github.com/user-attachments/assets/cb021ecc-80a6-45b6-8862-34caabda8589' width=50> 
     <p>API RESTful com Node.js, TypeScript e Yarn para cadastro de cidades e login de usuários! 🔐</p>
@@ -60,6 +62,6 @@
     <li><code>DELETE /city/:id</code> - Remover uma cidade pelo ID</li>
 </ul>
 
----
+<br><br>
 
-
+<img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
