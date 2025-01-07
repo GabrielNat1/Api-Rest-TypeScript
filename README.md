@@ -56,10 +56,10 @@
 ## 📝 Endpoints Disponíveis
 
 <ul>
-    <li><code>GET /city</code> - Listar todas as cidades</li>
-    <li><code>POST /city</code> - Adicionar uma nova cidade</li>
-    <li><code>PUT /city/:id</code> - Atualizar uma cidade pelo ID</li>
-    <li><code>DELETE /city/:id</code> - Remover uma cidade pelo ID</li>
+    <li><code>GET /cidade</code> - Listar todas as cidades</li>
+    <li><code>POST /cidade</code> - Adicionar uma nova cidade</li>
+    <li><code>PUT /cidade/:id</code> - Atualizar uma cidade pelo ID</li>
+    <li><code>DELETE /cidade/:id</code> - Remover uma cidade pelo ID</li>
 </ul>
 
 <br><br>
