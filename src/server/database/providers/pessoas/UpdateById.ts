@@ -6,7 +6,7 @@ import { ETableNames } from '../../Etablenames';
 export const updateById = async (id: number, pessoa: Omit<IPessoa, 'id'>): Promise<void | Error> => {
   try {
     const [{ count }] = await Knex(ETableNames.cidade)
-      .where('id', '=', pessoa.cidadeId)
+      .where('id', '=', pessoa.cidadeID)
       .count<[{ count: number }]>('* as count');
 
     if (count === 0) {

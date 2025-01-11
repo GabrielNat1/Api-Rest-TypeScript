@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3333;
 const IS_LOCALHOST = process.env.IS_LOCALHOST === 'true';
 
 const startServer = () => {
-  server.listen(PORT || IS_LOCALHOST == true, () => {
+  server.listen(PORT, () => {
     console.log(`App rodando na porta ${PORT}`);
   });
 };
