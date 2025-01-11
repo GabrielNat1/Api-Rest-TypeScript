@@ -16,7 +16,7 @@
     "knex:seed": "knex --knexfile ./src/server/database/knex/Environment.ts seed:run"
   },
   "dependencies": {
-    "@types/jest": "^29.5.14",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "http-status-codes": "^2.3.0",
@@ -26,6 +26,8 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jest": "^29.5.14",
     "@eslint/js": "^9.15.0",
     "@types/express": "^4.17.21",
     "@types/supertest": "^6.0.2",
