@@ -9,7 +9,7 @@ import { IUsuario } from '../../database/models';
 
 interface IBodyProps extends Omit<IUsuario, 'id'> { }
 
-export const createValidation = Validation((getSchema) => ({
+export const signUpValidation = Validation((getSchema) => ({
   body: getSchema<IBodyProps>(yup.object().shape({
     nome: yup.string().required().min(3),
     email: yup.string().required().min(3),
@@ -17,7 +17,7 @@ export const createValidation = Validation((getSchema) => ({
   })),
 }));
 
-export const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
+export const signUp = async (req: Request<{}, {}, IBodyProps>, res: Response) => {
   const result = await UsuariosProvider.create(req.body);
 
   if (result instanceof Error) {
