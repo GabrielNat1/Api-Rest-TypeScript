@@ -1,11 +1,13 @@
 <img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
 
 <div align="center" style="font-family: Arial, sans-serif; padding: 20px; background: linear-gradient(135deg, #007acc, #8a2be2); color: #fff; border-radius: 10px; border: 2px solid #fff;">
-    <h1> API REST TYPESCRIPT </h1> <img src='https://github.com/user-attachments/assets/cb021ecc-80a6-45b6-8862-34caabda8589' width=50> 
-    <p>API REST com Node.js, TypeScript e Yarn para cadastro de cidades e login de usuários! 🔐</p>
-    <img src='')
+    <h1> API REST TYPESCRIPT </h1>
+    <br>
+    <p><strong>API REST com Node.js, TypeScript e Yarn para cadastro de cidades e login de usuários! 🔐</strong></p>
+    <img src='https://github.com/user-attachments/assets/3cc90132-f83a-44aa-8a6b-c4a1640a530e')
     <br>
 </div>
+<br><br>
 
 ---
 
@@ -41,7 +43,7 @@
     ```
 3. **Execute a aplicação:**
     ```bash
-    yarn dev
+    yarn start
     ```
 4. **Acesse a API em:**
     ```bash
@@ -92,8 +94,60 @@ api-rest-typescript/
 <br>
 
 ---
+## 📜 Scripts do Projeto  
 
-## 🧪 Testes Automatizados  
+O arquivo `package.json` contém os seguintes scripts, que ajudam a automatizar tarefas importantes no desenvolvimento e execução do projeto:
+
+```json
+"scripts": {  
+  "start": "ts-node-dev ./src/index.ts",  
+  "postinstall": "tsc",  
+  "production": "node ./build/index.js",  
+  "test": "jest",  
+  "knex:migrate": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:latest",  
+  "knex:rollback": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback",  
+  "knex:rollback-all": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback --all",  
+  "knex:seed": "knex --knexfile ./src/server/database/knex/Environment.ts seed:run"  
+}  
+```
+
+### Explicação dos Scripts  
+
+- **`start`**  
+  Inicia o projeto em modo de desenvolvimento usando `ts-node-dev`. Isso permite que o código TypeScript seja executado diretamente, com suporte a recarregamento automático ao detectar mudanças nos arquivos.  
+
+- **`postinstall`**  
+  Gera o código JavaScript a partir dos arquivos TypeScript após a instalação das dependências. Isso é útil para preparar o ambiente de produção.  
+
+- **`production`**  
+  Executa o projeto já transpilado, rodando o código gerado em `build/index.js` no Node.js. Esse script é usado para iniciar o servidor em produção.  
+
+- **`test`**  
+  Executa os testes do projeto usando o Jest, que é uma biblioteca para testes unitários e integração.  
+
+- **`knex:migrate`**  
+  Aplica as migrações do banco de dados definidas em `migrations/` usando o Knex. Isso cria ou altera tabelas conforme necessário para manter a estrutura do banco de dados atualizada.  
+
+- **`knex:rollback`**  
+  Reverte a última migração aplicada no banco de dados, útil para corrigir erros recentes.  
+
+- **`knex:rollback-all`**  
+  Reverte todas as migrações aplicadas no banco de dados, restaurando-o ao estado inicial.  
+
+- **`knex:seed`**  
+  Executa os arquivos de seed definidos em `seeds/` para popular o banco de dados com dados iniciais ou de teste.  
+
+### Dicas de Uso  
+
+- Durante o desenvolvimento, utilize o script `start` para economizar tempo com recarregamentos automáticos.  
+- Antes de subir para produção, execute `postinstall` e valide tudo com `test`.  
+- Para manter o banco atualizado, rode `knex:migrate`. Caso precise testar ou corrigir, os scripts `knex:rollback` e `knex:rollback-all` são úteis.  
+- Use `knex:seed` para testar o sistema com dados simulados ou reiniciar o estado do banco em ambientes de desenvolvimento.  
+<br>
+
+---
+
+## 🧪 Testes Automatizados!  
 
 Para rodar os testes automatizados:
 
@@ -105,7 +159,7 @@ Para rodar os testes automatizados:
 
 ---
 
-## 📚 Testes Da API  
+## 📚 Testes Dos EndPoints Da API  
 
 Onde você pode testar os endpoints diretamente.
 
@@ -141,16 +195,14 @@ A API depende de algumas variáveis de ambiente para funcionamento correto. Voc�
 
 ## 💡 Desenvolvimento  
 
-- **Performance:** Utilize cache para dados frequentemente acessados, como listas de cidades.  
-- **Melhorias:** Considere implementar um sistema de cache com Redis para melhorar o tempo de resposta em rotas que fazem consultas pesadas.
+- **Performance:** cache para dados frequentemente acessados, como listas de cidades.  
+- **Melhorias:** sistema de cache com Redis para melhorar o tempo de resposta em rotas que fazem consultas pesadas.
 
 ---
 
 ## 📅 Roadmap de Versões  
 
 - **Versão 1.0:** Lançamento inicial com funcionalidades básicas de CRUD e autenticação.  
--
--
 
 <br><br>
 
@@ -196,5 +248,7 @@ A API depende de algumas variáveis de ambiente para funcionamento correto. Voc�
 ```bash 
 - `POST /post/cadastrar` - Cadastrar 
 ```
+
+<br><br>
 
 <img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
