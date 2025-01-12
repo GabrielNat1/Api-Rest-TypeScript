@@ -7,8 +7,8 @@ interface IJwtData {
 }
 
 
-const sign = (data: IJwtData) => {
-    if (!process.env.JWT_SECRET) return 'JWT_SECRET not found';
+const sign = (data: IJwtData): string | "JWT_SECRET_NOT_FOUND" => {
+    if (!process.env.JWT_SECRET) return 'JWT_SECRET_NOT_FOUND';
 
     return jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '24h' });
 
