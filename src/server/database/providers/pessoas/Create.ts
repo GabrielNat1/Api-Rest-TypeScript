@@ -1,6 +1,6 @@
+import { ETableNames } from '../../Etablenames';
 import { IPessoa } from '../../models';
 import { Knex } from '../../knex';
-import { ETableNames } from '../../Etablenames';
 
 
 export const create = async (pessoa: Omit<IPessoa, 'id'>): Promise<number | Error> => {

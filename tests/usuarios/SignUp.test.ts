@@ -86,7 +86,7 @@ describe('Usuário - SignUp', () => {
       .send({
         senha: '123456',
         nome: 'Juca da Silva',
-        email: 'jucasilva gmail.com',
+        email: 'jucasilva  gmail.com',
       });
     expect(res1.statusCode).toEqual(StatusCodes.BAD_REQUEST);
     expect(res1.body).toHaveProperty('errors.body.email');

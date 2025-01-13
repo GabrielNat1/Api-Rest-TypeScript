@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import * as yup from 'yup';
 
 import { PessoasProvider } from '../../database/providers/pessoas';
-import { Validation } from '../../shared/middleware';
+import { Validation } from '../../shared/middleware/Validation';
 import { IPessoa } from './../../database/models';
 
 
