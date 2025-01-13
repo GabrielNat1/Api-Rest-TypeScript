@@ -7,7 +7,7 @@
   "private": false,
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
-    "postinstall": "tsc",
+    "preproduction": "tsc",
     "production": "node ./build/index.js",
     "test": "jest",
     "knex:migrate": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:latest",
