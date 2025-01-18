@@ -1,104 +1,99 @@
-<img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
-
 <div align="center" style="font-family: Arial, sans-serif; padding: 20px; background: linear-gradient(135deg, #007acc, #8a2be2); color: #fff; border-radius: 10px; border: 2px solid #fff;">
-    <h1> API REST TYPESCRIPT </h1>
+    <h1>API REST TYPESCRIPT</h1>
     <br>
-    <p><strong>API REST com Node.js, TypeScript e Yarn para cadastro de cidades e login de usuários! 🔐</strong></p>
-    <img src='https://github.com/user-attachments/assets/3cc90132-f83a-44aa-8a6b-c4a1640a530e')
+    <p><strong>REST API with Node.js, TypeScript, and Yarn for city registration and user login! 🔐</strong></p>
+    <img src="https://github.com/user-attachments/assets/3cc90132-f83a-44aa-8a6b-c4a1640a530e" alt="API Image"/>
     <br>
 </div>
-<br><br>
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
 <ul>
     <li><strong>Node.js</strong> 🌐</li>
     <li><strong>TypeScript</strong> 🦾</li>
     <li><strong>Yarn</strong> 📦</li>
-    <li><strong>Banco de Dados:</strong> JSON & SQLite3</li>
+    <li><strong>Database:</strong> JSON & SQLite3</li>
 </ul>
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
 <ul>
-    <li>Autenticação de usuários (login e senha) 🔑</li>
-    <li>CRUD completo para cidades 🏙️</li>
-    <li>Banco de dados simples utilizando JSON 💾</li>
+    <li>User authentication (login and password) 🔑</li>
+    <li>Full CRUD for cities 🏙️</li>
+    <li>Simple database using JSON 💾</li>
 </ul>
 <br>
 
 ---
 
-## 🎯 Como Rodar o Projeto Localmente
+## 🎯 How to Run the Project Locally
 
-1. **Clone o repositório:**
-    ```bash
-    git clone https://github.com/seu-usuario/CityListAPI.git
+1. **Clone the repository:**
+    ```bash  
+    git clone https://github.com/your-user/CityListAPI.git  
     ```
-2. **Instale as dependências:**
-    ```bash
-    yarn install
-    ```
-3. **Execute a aplicação:**
-    ```bash
-    yarn start
-    ```
-4. **Acesse a API em:**
-    ```bash
-    http://localhost:3333
-    ```
+2. **Install dependencies:**
+     ```bash    
+    yarn install  
+     ```
+3. **Run the application:**
+     ```bash    
+    yarn start  
+     ```
+4. **Access the API at:**
+     ```bash   
+    http://localhost:3333  
+     ```
+## 🛡️ Security  
 
-## 🛡️ Segurança  
-
-- **Autenticação:** Utiliza JWT (JSON Web Tokens) para garantir que apenas usuários autenticados possam acessar rotas protegidas.  
-- **Validação de Dados:** Validação dos dados de entrada com `class-validator` e `zod` para garantir a integridade das informações.  
+- **Authentication:** Uses JWT (JSON Web Tokens) to ensure that only authenticated users can access protected routes.  
+- **Data Validation:** Input data validation with `class-validator` and `zod` to ensure data integrity.  
 <br>
 
 ---
 
-## 📂 Estrutura de Diretórios  
+## 📂 Directory Structure  
 
-A estrutura de diretórios do projeto é organizada da seguinte forma:
+The project directory structure is organized as follows:
 
-<br>
-
-```bash
+ ```bash   
 api-rest-typescript/  
 ├── src/  
 │   ├── server/  
-│   │   ├── controllers/         # Gerenciamento das requisições e respostas  
-│   │   ├── database/            # Configuração da base de dados  
-│   │   │   ├── knex/            # Conexão e queries com o banco de dados usando Knex  
-│   │   │   ├── migrations/      # Arquivos para versionamento da base de dados  
-│   │   │   ├── models/          # Definições das entidades e esquemas de dados  
-│   │   │   ├── providers/       # Serviços relacionados a banco de dados  
-│   │   │   └── seeds/           # Dados para inicialização do banco  
-│   │   ├── routes/              # Definição das rotas da API  
+│   │   ├── controllers/         # Request and response management  
+│   │   ├── database/            # Database configuration  
+│   │   │   ├── knex/            # Database connection and queries using Knex  
+│   │   │   ├── migrations/      # Files for database versioning  
+│   │   │   ├── models/          # Data entity and schema definitions  
+│   │   │   ├── providers/       # Database related services  
+│   │   │   └── seeds/           # Initial database data  
+│   │   ├── routes/              # API route definitions  
 │   │   └── shared/  
-│   │       ├── middleware/      # Funções intermediárias (autenticação, validação)  
-│   │       └── services/        # Lógica reutilizável e serviços auxiliares  
+│   │       ├── middleware/      # Middleware functions (authentication, validation)  
+│   │       └── services/        # Reusable logic and helper services  
 ├── tests/  
-│   ├── cidades/                 # Testes relacionados às funcionalidades de cidades  
-│   ├── pessoas/                 # Testes relacionados às funcionalidades de pessoas  
-│   └── usuarios/                # Testes relacionados às funcionalidades de usuários  
-├── .env                         # Arquivo de variáveis de ambiente  
-├── README.md                    # Documentação do projeto  
-├── tsconfig.json                # Configuração do TypeScript  
-├── yarn.lock                    # Arquivo de bloqueio de dependências do Yarn  
-├── jest.config.ts               # Configuração do Jest para testes  
-└── package.json                 # Metadados e dependências do projeto  
-```
+│   ├── cities/                 # Tests for city functionalities  
+│   ├── people/                 # Tests for people functionalities  
+│   └── users/                  # Tests for user functionalities  
+├── .env                         # Environment variables file  
+├── README.md                    # Project documentation  
+├── tsconfig.json                # TypeScript configuration  
+├── yarn.lock                    # Yarn dependency lock file  
+├── jest.config.ts               # Jest test configuration  
+└── package.json                 # Project metadata and dependencies  
+ ```
 
 <br>
 
 ---
-## 📜 Scripts do Projeto  
 
-O arquivo `package.json` contém os seguintes scripts, que ajudam a automatizar tarefas importantes no desenvolvimento e execução do projeto:
+## 📜 Project Scripts  
 
-```json
+The `package.json` file contains the following scripts to automate important tasks in development and running the project:
+
+ ```json 
 "scripts": {  
   "start": "ts-node-dev ./src/index.ts",  
   "postinstall": "tsc",  
@@ -109,111 +104,116 @@ O arquivo `package.json` contém os seguintes scripts, que ajudam a automatizar 
   "knex:rollback-all": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback --all",  
   "knex:seed": "knex --knexfile ./src/server/database/knex/Environment.ts seed:run"  
 }  
-```
+ ```  
 
-### Explicação dos Scripts  
+### Explanation of the Scripts  
 
 - **`start`**  
-  Inicia o projeto em modo de desenvolvimento usando `ts-node-dev`. Isso permite que o código TypeScript seja executado diretamente, com suporte a recarregamento automático ao detectar mudanças nos arquivos.  
+  Starts the project in development mode using `ts-node-dev`. This allows TypeScript code to be executed directly with automatic reloading when file changes are detected.  
 
 - **`postinstall`**  
-  Gera o código JavaScript a partir dos arquivos TypeScript após a instalação das dependências. Isso é útil para preparar o ambiente de produção.  
+  Generates JavaScript code from TypeScript files after installing dependencies. Useful for preparing the production environment.  
 
 - **`production`**  
-  Executa o projeto já transpilado, rodando o código gerado em `build/index.js` no Node.js. Esse script é usado para iniciar o servidor em produção.  
+  Runs the project after transpiling, executing the generated JavaScript code in `build/index.js` on Node.js. This script is used to start the server in production.  
 
 - **`test`**  
-  Executa os testes do projeto usando o Jest, que é uma biblioteca para testes unitários e integração.  
+  Runs the project tests using Jest, a framework for unit and integration tests.  
 
 - **`knex:migrate`**  
-  Aplica as migrações do banco de dados definidas em `migrations/` usando o Knex. Isso cria ou altera tabelas conforme necessário para manter a estrutura do banco de dados atualizada.  
+  Applies database migrations defined in `migrations/` using Knex. This creates or alters tables as needed to keep the database schema updated.  
 
 - **`knex:rollback`**  
-  Reverte a última migração aplicada no banco de dados, útil para corrigir erros recentes.  
+  Rolls back the last applied migration, useful for fixing recent errors.  
 
 - **`knex:rollback-all`**  
-  Reverte todas as migrações aplicadas no banco de dados, restaurando-o ao estado inicial.  
+  Rolls back all applied migrations, restoring the database to its initial state.  
 
 - **`knex:seed`**  
-  Executa os arquivos de seed definidos em `seeds/` para popular o banco de dados com dados iniciais ou de teste.  
+  Executes seed files in `seeds/` to populate the database with initial or test data.  
 
-### Dicas de Uso  
+### Usage Tips  
 
-- Durante o desenvolvimento, utilize o script `start` para economizar tempo com recarregamentos automáticos.  
-- Antes de subir para produção, execute `postinstall` e valide tudo com `test`.  
-- Para manter o banco atualizado, rode `knex:migrate`. Caso precise testar ou corrigir, os scripts `knex:rollback` e `knex:rollback-all` são úteis.  
-- Use `knex:seed` para testar o sistema com dados simulados ou reiniciar o estado do banco em ambientes de desenvolvimento.  
+- During development, use the `start` script to save time with automatic reloading.  
+- Before deploying to production, run `postinstall` and validate everything with `test`.  
+- To keep the database updated, run `knex:migrate`. If needed, use `knex:rollback` or `knex:rollback-all` to fix or reset the state.  
+- Use `knex:seed` to test the system with simulated data or reset the database state in development environments.  
 <br>
 
 ---
 
-## 🧪 Testes Automatizados!  
+## 🧪 Automated Tests!  
 
-Para rodar os testes automatizados:
+To run automated tests:
 
-1. **Instale as dependências de teste**:  
-    - `yarn add jest @types/jest ts-jest --dev`
+1. **Install test dependencies:**  
+     ```bash    
+    yarn add jest @types/jest ts-jest --dev  
+     ```
+2. **Run the tests:**  
+     ```bash    
+    yarn test  
+     ```
+---
 
-2. **Rodando os testes**:  
-    - `yarn test`
+## 📚 Test API Endpoints  
+
+You can directly test the API endpoints.
+
+- Access after opening the server:  
+     ```bash   
+    http://localhost:3333/  
+     ```
+---
+
+## 🌐 CORS Support  
+
+The API is configured to allow requests from different domains using the `cors` package. This allows the API to be accessed by frontends hosted on different servers.
 
 ---
 
-## 📚 Testes Dos EndPoints Da API  
+## 🔒 Authorization and Permissions  
 
-Onde você pode testar os endpoints diretamente.
-
-- Acesse após abrir o servidor:  
-    - `http://localhost:3333/`
-
----
-
-## 🌐 Suporte a CORS  
-
-A API está configurada para permitir requisições de diferentes domínios, utilizando o pacote `cors`. Isso permite que a API seja acessada por frontends em diferentes servidores.
+- The API uses role-based access control. There are two main types of users:
+  - **Admin:** Full access, including the ability to manage users and cities.
+  - **User:** Limited access to CRUD cities and personal resources.
 
 ---
 
-## 🔒 Autorização e Permissões  
+## ⚙️ Configuration and Environment Variables  
 
-- A API utiliza controle de acesso baseado em roles. Existem dois principais tipos de usuário:
-  - **Admin:** Acesso completo, incluindo a possibilidade de gerenciar usuários e cidades.
-  - **Usuário:** Acesso apenas ao CRUD de cidades e recursos pessoais.
-
----
-
-## ⚙️ Configuração e Variáveis de Ambiente  
-
-A API depende de algumas variáveis de ambiente para funcionamento correto. Você deve renomear o arquivo `.env.example` com as seguintes chaves:
+The API requires some environment variables for correct operation. You must rename the `.env.example` file with the following keys:
 
 - `IS_LOCALHOST=true`
 - `NODE_ENV=dev`
 - `PORT=3333`
-- `JWT_SECRET=[key_secret] coloque uma chave secreta`
+- `JWT_SECRET=[key_secret] set a secret key`
 
 ---
 
-## 💡 Desenvolvimento  
+## 💡 Development  
 
-- **Performance:** cache para dados frequentemente acessados, como listas de cidades.  
-- **Melhorias:** sistema de cache com Redis para melhorar o tempo de resposta em rotas que fazem consultas pesadas.
+- **Performance:** Cache for frequently accessed data like city lists.  
+- **Improvements:** Redis caching system to improve response time on routes that perform heavy queries.
 
 ---
 
-## 📅 Roadmap de Versões  
+## 📅 Version Roadmap  
 
-- **Versão 1.0:** Lançamento inicial com funcionalidades básicas de CRUD e autenticação.  
+- **Version 1.0:** Initial release with basic CRUD and authentication features.  
 
 <br><br>
 
 ---
 
-## 📝 Endpoints Disponíveis  
+## 📝 Available Endpoints  
+
  <br>
- <img src='https://github.com/user-attachments/assets/8d33268b-9507-40b8-9b5f-b6da58b95c0c')    
+ <img src="https://github.com/user-attachments/assets/8d33268b-9507-40b8-9b5f-b6da58b95c0c" alt="API Endpoints" />   
  <br> 
  
-### Cidades  
+ 
+### Cities 
 ```bash
 - `GET /cidade` - Listar todas as cidades
 ```
@@ -227,7 +227,7 @@ A API depende de algumas variáveis de ambiente para funcionamento correto. Voc�
 - `DELETE /cidade/:id` - Remover uma cidade pelo ID
 ```
 
-### Pessoas  
+### People  
 ```bash
 - `GET /pessoa` - Listar todas as pessoas
 ```
@@ -246,9 +246,8 @@ A API depende de algumas variáveis de ambiente para funcionamento correto. Voc�
 - `POST /post/entrar` - Entrar
 ```
 ```bash 
-- `POST /post/cadastrar` - Cadastrar 
+- `POST /post/cadastrar` - Cadastrar
 ```
-
 <br><br>
 
-<img src='https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d'>
+<img src="https://github.com/user-attachments/assets/6f3ea7cf-8ffe-4bc4-97e5-28f7f003c40d" alt="API Endpoints Image">
