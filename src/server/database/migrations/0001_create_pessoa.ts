@@ -2,7 +2,6 @@ import { Knex } from 'knex';
 
 import { ETableNames } from '../Etablenames';
 
-
 export async function up(knex: Knex) {
   return knex
     .schema
@@ -20,8 +19,12 @@ export async function up(knex: Knex) {
         .onUpdate('CASCADE')
         .onDelete('RESTRICT');
 
-
       table.comment('Tabela usada para armazenar pessoas do sistema.');
+    })
+    .createTable(ETableNames.cidade, table => {
+      table.bigIncrements('id').primary().index();
+      table.string('nome').index().notNullable();
+      table.string('estado').index().notNullable();
     })
     .then(() => {
       console.log(`# Created table ${ETableNames.pessoa}`);

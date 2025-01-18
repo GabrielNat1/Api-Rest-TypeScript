@@ -11,8 +11,10 @@ export const create = async (usuario: Omit<IUsuario, 'id'>): Promise<number | Er
     const [result] = await Knex(ETableNames.usuario).insert({...usuario, senha: hashedPassword}).returning('id');
 
     if (typeof result === 'object') {
+      console.log('User created with ID:', result.id);
       return result.id;
     } else if (typeof result === 'number') {
+      console.log('User created with ID:', result);
       return result;
     }
 

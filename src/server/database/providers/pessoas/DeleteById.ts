@@ -8,7 +8,10 @@ export const deleteById = async (id: number): Promise<void | Error> => {
       .where('id', '=', id)
       .del();
 
-    if (result > 0) return;
+    if (result > 0) {
+      console.log('Record deleted with ID:', id);
+      return;
+    }
 
     return new Error('Erro ao apagar o registro!!');
   } catch (error) {
